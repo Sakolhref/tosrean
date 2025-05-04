@@ -276,6 +276,7 @@ html, body {
   @media (max-width: 768px) {
     .content{
         font-size: 1.2rem;
+        margin:10px;
 
     }
   
@@ -287,6 +288,7 @@ html, body {
       justify-content: center;
       align-content: center;
       
+      
     }
   
     .artsection img {
@@ -296,11 +298,13 @@ html, body {
     }
   
     .arttext {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       text-align: center;
       align-content: center;
       align-items: center;
       justify-content: center;
+      display: flex;
+      margin: 10px;
     }
 
     .arttext p{
@@ -309,7 +313,30 @@ html, body {
         align-items: center;
     }
   }
+    
+ @media(max-width: 375px){
+    .artsection img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
   
+    .arttext {
+      font-size: 1.2rem;
+      text-align: center;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 10px;
+    }
 
+    .arttext p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ }
+/* Footer Section */
 /*text chat section css */
 
