@@ -2,11 +2,18 @@
 body {
     margin: 0;
     font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 400; 
     font-style: normal;
     padding: 0;
     overflow-x: hidden;
 }
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Navigation Bar */
 .navigational_bar {
