@@ -1,0 +1,45 @@
+.sidebarbtn{
+    width: 35px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.sidebar {
+    position: absolute; /* removed from normal document flow */
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh; /* full screen height */
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    z-index: 1000; /* ensures it's in front */
+}
+
+
+.sidebarlist{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    list-style: none;
+    align-items: center;
+    margin: 15px;
+    justify-content: start;
+    text-align: center;
+    font-size: 1.5rem;
+    border: solid 2px black ;
+    border-radius: 15px;
+    height: 100%;
+
+}
+
+.sidebarlist li{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s;
+    width: 160px;
+
+}

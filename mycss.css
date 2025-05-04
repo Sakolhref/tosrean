@@ -1,0 +1,290 @@
+
+body {
+    margin: 0;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navigational_bar {
+    background-color: rgb(181, 237, 97);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+    
+}
+
+
+
+.navlist {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ul-nav {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.li-nav:hover {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+.Text, .Image {
+    flex: 1 1 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+}
+
+.content h1 {
+    background-color: antiquewhite;
+    display: flex;
+    /* justify-content: center; */
+}
+
+/* Responsive Image */
+.image1 {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+/* Card Section */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(22, 110, 0);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 1 calc(25% - 40px); /* 4 per row */
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    background-color: rgb(181, 237, 97);
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: fit-cover;
+    
+}
+
+.card p{
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .card {
+        flex: 0 1 calc(50% - 40px); /* 2 per row */
+    }
+
+    .content {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 1 100%; /* 1 per row */
+    }
+
+    .ul-nav {
+       
+        gap: 10px;
+    }
+
+    .li-nav a {
+        font-size: 1rem;
+    }
+
+    .content {
+        margin: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+.artsection {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: center; /* Optional: better vertical alignment */
+    width: 100%;
+    height: auto; /* Let height grow naturally */
+    padding: 20px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 140, 0, 1) 0%,
+      rgba(255, 216, 20, 1) 50%,
+      rgba(227, 45, 45, 1) 100%
+    );
+  }
+  
+  .artsection img {
+    width: 100%;
+    max-width: 400px; /* Limit image width */
+    height: auto;
+    object-fit: cover;
+    margin-left: 0;
+    margin-right: 20px;
+    display: block;
+    flex: 1 1 300px; /* Flexible sizing */
+  }
+  
+  .arttext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 300px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 20px;
+    
+  }
+
+  /* .arttext p{
+    margin-left:5px;
+  } */
+  
+  .artbuttons {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .artbuttons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .artbutton {
+    animation: gradient-animation 12s ease infinite;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 15px;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+.artbutton:hover{
+   
+    color: white;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(282deg,deepskyblue,#00edff,#27c648);
+    background-size: 180% 180%;
+    animation: gradient-animation 3s ease infinite;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+ 
+  @media (max-width: 768px) {
+    .artsection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .artsection img {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 80%;
+    }
+  
+    .arttext {
+      font-size: 1.5rem;
+      text-align: center;
+      align-content: center;
+    }
+
+    .arttext p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  
+
+/*text chat section css */
+
