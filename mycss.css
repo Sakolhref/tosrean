@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: "Cal Sans", sans-serif;
@@ -165,7 +164,7 @@ html, body {
     }
 
     .content {
-        margin: 10px;
+        /* margin: 10px; */
         font-size: 1.2rem;
     }
 }
@@ -207,12 +206,20 @@ html, body {
     font-size: 2rem;
     font-weight: 700;
     padding: 20px;
-    
+    text-align: center;
+    margin: 0 auto; /* This centers the element horizontally */
+    box-sizing: border-box; /* This ensures padding doesn't add to width */
   }
-
-  /* .arttext p{
-    margin-left:5px;
-  } */
+  
+  .arttext p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   .artbuttons {
     font-size: 2rem;
@@ -267,22 +274,33 @@ html, body {
 
  
   @media (max-width: 768px) {
+    .content{
+        font-size: 1.2rem;
+
+    }
+  
     .artsection {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      
     }
   
     .artsection img {
-      margin-right: 0;
+     
       margin-bottom: 20px;
-      width: 80%;
+      width: 100%;
     }
   
     .arttext {
       font-size: 1.5rem;
       text-align: center;
       align-content: center;
+      align-items: center;
+      justify-content: center;
     }
 
     .arttext p{
