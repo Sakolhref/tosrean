@@ -5,6 +5,8 @@ body {
     font-style: normal;
     padding: 0;
     overflow-x: hidden;
+    cursor: default;
+    user-select: none;
 }
 
 html, body {
@@ -67,17 +69,28 @@ html, body {
     
 }
 
-.Text, .Image {
+.Text {
+    display: flex;
+    justify-content: center; /* Change from space-between to center */
     flex: 1 1 400px;
-    padding: 20px;
+    margin-left: 0;
     box-sizing: border-box;
+     
+    font-size: 2rem;
 }
 
 .content {
     font-size: 2rem;
     font-weight: 400;
     color: black;
+   
+    width: 70%;
+   
+    
 }
+
+
+
 
 .content h1 {
     background-color: antiquewhite;
@@ -92,6 +105,27 @@ html, body {
     max-width: 600px;
     display: block;
     margin: auto;
+}
+
+@media (max-width: 375px) {
+    .Text { /* Fix capitalization - was 'Text' */
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0; /* Reset all margins */
+        
+        width: 100%; /* Ensure full width */
+    }
+
+    .contents{
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+    .typewriter{
+      font-size: 1.2rem;
+      
+    }
 }
 
 /* Card Section */
@@ -302,9 +336,10 @@ html, body {
       text-align: center;
       align-content: center;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       display: flex;
-      margin: 10px;
+      width: 50%;
+      
     }
 
     .arttext p{
@@ -315,6 +350,20 @@ html, body {
   }
     
  @media(max-width: 375px){
+  .content{
+        font-size: 1.2rem;
+        margin:10px;
+    }
+  
+    .artsection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      
+  }
     .artsection img {
       width: 100%;
       height: auto;
@@ -328,7 +377,8 @@ html, body {
       align-items: center;
       justify-content: center;
       display: flex;
-      margin: 10px;
+      
+      
     }
 
     .arttext p{
@@ -340,3 +390,191 @@ html, body {
 /* Footer Section */
 /*text chat section css */
 
+.section2{
+width: 100%;
+height: 500px;
+background-color: rgb(0, 0, 0);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.box-art{
+  width: 350px;
+  height: 350px;
+  background-color:;
+  margin-left: 100px;
+  user-select: none;
+  cursor: default;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; 
+}
+
+
+.box1{
+  background-color: #27c648;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+  align-items:center;
+  border-radius: 25px;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 1;
+  animation: rotateanimation 8s infinite linear;
+  animation-delay:1s ;
+  border: 2px solid #00f; /* Blue border */
+  box-shadow:
+    0 0 5px #00f,
+    0 0 15px #00f,
+    0 0 30px #00f,
+    0 0 60px #00f; 
+}
+
+.box2{
+  background-color: #ffff09;
+  width: 300px;
+  height: 300px;
+  transform: rotate(65deg);
+  align-items:center;
+  border-radius: 25px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+  animation: rotateanimation 8s infinite linear;
+  animation-delay: 2s;
+  border: 2px solid red;
+  box-shadow:
+    0 0 5px red,
+    0 0 15px red,
+    0 0 30px red,
+    0 0 60px red;
+}
+
+.box3{
+  background-color: #ff8a04;
+  width: 300px;
+  height: 300px;
+  transform: rotate(95deg);
+  align-items:center;
+
+  border-radius: 25px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
+  animation: rotateanimation 8s infinite linear;
+  animation-delay: 2.5s;
+  border: 2px solid #f0f;
+  box-shadow:
+    0 0 5px #f0f,
+    0 0 15px #f0f,
+    0 0 30px #f0f,
+    0 0 60px #f0f;
+}
+
+.box4{
+  background-color: #ff8a04;
+  width: 300px;
+  height: 300px;
+  transform: rotate(95deg);
+  align-items:center;
+ 
+  border-radius: 25px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 4;
+  animation: rotateanimation 8s infinite linear;
+  animation-delay: 3s;
+  border: 2px solid rgb(150, 5, 247);
+  box-shadow:
+    0 0 5px rgb(150, 5, 247),
+    0 0 15px rgb(150, 5, 247),
+    0 0 30px rgb(150, 5, 247),
+    0 0 60px rgb(150, 5, 247);
+}
+
+@keyframes rotateanimation{
+  from{
+    transform: rotate(0deg) ;
+  }
+  to{
+    transform: rotate(360deg) ;
+  }
+}
+
+@keyframes pulse{
+  from{
+    box-shadow: none;
+  }
+  to{
+    box-shadow: 100px;
+  }
+}
+
+.glow-text{
+  color: white;
+  
+  display: flex;
+  
+  width: 50%;
+  font-size: 2rem;
+  cursor: default;
+  user-select: none;
+
+
+}
+
+.glow-text h1{
+ text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+ animation: slowpulse infinite linear 3s;   
+}
+
+@keyframes slowpulse {
+ 0%,100%{
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+ }
+ 50%{
+  text-shadow:
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+ }
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+  }
+
+  .box-art {
+    margin-left: 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+  .glow-text {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: auto;
+  }
+}
